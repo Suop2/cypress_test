@@ -2,8 +2,8 @@ describe('Тестирование формы авторизации', function 
 
     it('end-2-end покупки аватара', function () {
        cy.visit('https://pokemonbattle.me/login')
-       cy.get(':nth-child(1) > .auth__input').type('palpatin322@gmail.com');
-       cy.get('#password').type('124578qwE');
+       cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN ');
+       cy.get('#password').type('USER_PASSWORD');
        cy.get('.auth__button').click();
        cy.get('[href="/shop"] > .header__btn-img').click();
        cy.get('.available > .shop__button').first().click();
